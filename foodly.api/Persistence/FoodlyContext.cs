@@ -79,7 +79,7 @@ public partial class FoodlyContext : DbContext
             entity.Property(e => e.VoterId)
                 .ValueGeneratedNever()
                 .HasColumnName("voter_id");
-            entity.Property(e => e.DiscordID);
+            entity.Property(e => e.DiscordID).HasColumnName("discordid");
             entity.Property(e => e.TimeVoted)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("time_voted");

@@ -1,6 +1,7 @@
 using foodly.api.DTO;
 using foodly.api.features.food;
 using foodly.api.features.vote;
+using foodly.api.Services;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,5 +16,6 @@ public static class VotingEndpoints
             CreateVoteResponse response = await sender.Send(CreateVoteCommand, new CancellationToken());
             return response;
         });
+        app.MapGet("api/v1/verifyVoter", async (IVotingService service, string discordID) => await service.VerifyVoterAsync(discordID));
     }
 }
