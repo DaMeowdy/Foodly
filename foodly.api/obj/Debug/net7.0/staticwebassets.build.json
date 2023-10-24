@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "x3a4HAAtmOgwxRBgl5KpC103LfuwX/BT3Coj36nRHCg=",
+  "Source": "foodly.api",
+  "BasePath": "_content/foodly.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
