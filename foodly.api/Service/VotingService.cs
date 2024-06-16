@@ -1,9 +1,7 @@
 using System.Text.Json;
-using FluentValidation;
 using foodly.api.Domain;
 using foodly.api.DTO;
 using foodly.api.Persistence;
-using foodly.api.Validation;
 using Microsoft.EntityFrameworkCore;
 
 namespace foodly.api.Services;
@@ -26,7 +24,7 @@ public class VotingService : IVotingService
 
         if (!_context.Voters.Any(voter => voter.DiscordID == request.DiscordID))
         {
-            Guid guid = Guid.NewGuid();
+            Guid guid = new Guid();
             Vote vote = new Vote
             {
                 Votes = JsonSerializer.Serialize(request.vego_votes.Concat(request.votes)),
